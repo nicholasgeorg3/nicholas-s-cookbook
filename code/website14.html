@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicholas's Recipe Book</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .recipe-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-content {
+            padding: 1.5rem;
+        }
+
+        .recipe-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .recipe-origin {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .recipe-description {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        /* Modified style for recipe page images */
+        .recipe-page-image {
+            max-width: 100%;
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin: 20px auto;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nicholas's Recipe Book</h1>
+        <p>Discover culinary traditions from around the world</p>
+    </header>
+
+    <div class="recipe-grid">
+        <!-- Italian Recipes -->
+        <a href="./recipes/pasta.html" class="recipe-card">
+            <img src="./images/pasta.jpg" alt="Italian Pasta" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Classic Spaghetti Carbonara</h2>
+                <p class="recipe-origin">Origin: Rome, Italy</p>
+                <p class="recipe-description">A traditional Roman pasta dish made with eggs, cheese, guanciale, and black pepper.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/pizza.html" class="recipe-card">
+            <img src="./images/pizza.jpg" alt="Italian Pizza" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Neapolitan Pizza</h2>
+                <p class="recipe-origin">Origin: Naples, Italy</p>
+                <p class="recipe-description">Authentic Italian pizza with San Marzano tomatoes and fresh mozzarella.</p>
+            </div>
+        </a>
+
+        <!-- Japanese Recipes -->
+        <a href="./recipes/sushi.html" class="recipe-card">
+            <img src="./images/sushi.jpg" alt="Japanese Sushi" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Homemade Sushi Rolls</h2>
+                <p class="recipe-origin">Origin: Japan</p>
+                <p class="recipe-description">Fresh and delicious sushi rolls with traditional Japanese ingredients.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/ramen.html" class="recipe-card">
+            <img src="./images/ramen.jpg" alt="Japanese Ramen" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Tonkotsu Ramen</h2>
+                <p class="recipe-origin">Origin: Japan</p>
+                <p class="recipe-description">Rich and creamy pork bone broth ramen with tender chashu.</p>
+            </div>
+        </a>
+
+        <!-- Indian Recipes -->
+        <a href="./recipes/curry.html" class="recipe-card">
+            <img src="./images/curry.jpg" alt="Indian Curry" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Butter Chicken</h2>
+                <p class="recipe-origin">Origin: Delhi, India</p>
+                <p class="recipe-description">Tender chicken in a rich, creamy tomato-based curry sauce.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/biryani.html" class="recipe-card">
+            <img src="./images/biryani.jpg" alt="Indian Biryani" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Hyderabadi Biryani</h2>
+                <p class="recipe-origin">Origin: Hyderabad, India</p>
+                <p class="recipe-description">Aromatic rice dish layered with spiced meat and herbs.</p>
+            </div>
+        </a>
+
+        <!-- Mexican Recipes -->
+        <a href="./recipes/tacos.html" class="recipe-card">
+            <img src="./images/tacos.jpg" alt="Mexican Tacos" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Street Tacos Al Pastor</h2>
+                <p class="recipe-origin">Origin: Mexico City, Mexico</p>
+                <p class="recipe-description">Marinated pork tacos with pineapple and cilantro.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/enchiladas.html" class="recipe-card">
+            <img src="./images/enchiladas.jpg" alt="Mexican Enchiladas" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Chicken Enchiladas</h2>
+                <p class="recipe-origin">Origin: Mexico</p>
+                <p class="recipe-description">Tortillas filled with chicken and covered in spicy sauce.</p>
+            </div>
+        </a>
+
+        <!-- Chinese Recipes -->
+        <a href="./recipes/dumplings.html" class="recipe-card">
+            <img src="./images/dumplings.jpg" alt="Chinese Dumplings" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Pork Dumplings</h2>
+                <p class="recipe-origin">Origin: China</p>
+                <p class="recipe-description">Handmade dumplings filled with seasoned pork and vegetables.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/kungpao.html" class="recipe-card">
+            <img src="./images/kungpao.jpg" alt="Kung Pao Chicken" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Kung Pao Chicken</h2>
+                <p class="recipe-origin">Origin: Sichuan, China</p>
+                <p class="recipe-description">Spicy diced chicken with peanuts and vegetables.</p>
+            </div>
+        </a>
+
+        <!-- Thai Recipes -->
+        <a href="./recipes/pad-thai.html" class="recipe-card">
+            <img src="./images/pad-thai.jpg" alt="Pad Thai" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Pad Thai</h2>
+                <p class="recipe-origin">Origin: Thailand</p>
+                <p class="recipe-description">Stir-fried rice noodles with tofu, shrimp, and peanuts.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/greencurry.html" class="recipe-card">
+            <img src="./images/greencurry.jpg" alt="Thai Green Curry" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Thai Green Curry</h2>
+                <p class="recipe-origin">Origin: Thailand</p>
+                <p class="recipe-description">Coconut curry with chicken and Thai eggplants.</p>
+            </div>
+        </a>
+
+        <!-- French Recipes -->
+        <a href="./recipes/coqauvin.html" class="recipe-card">
+            <img src="./images/coqauvin.jpg" alt="Coq au Vin" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Coq au Vin</h2>
+                <p class="recipe-origin">Origin: France</p>
+                <p class="recipe-description">Chicken braised in wine with mushrooms and pearl onions.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/ratatouille.html" class="recipe-card">
+            <img src="./images/ratatouille.jpg" alt="Ratatouille" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Ratatouille</h2>
+                <p class="recipe-origin">Origin: Provence, France</p>
+                <p class="recipe-description">Provençal vegetable stew with eggplant, zucchini, and tomatoes.</p>
+            </div>
+        </a>
+
+        <!-- Greek Recipes -->
+        <a href="./recipes/moussaka.html" class="recipe-card">
+            <img src="./images/moussaka.jpg" alt="Moussaka" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Moussaka</h2>
+                <p class="recipe-origin">Origin: Greece</p>
+                <p class="recipe-description">Layered eggplant casserole with spiced ground meat.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/souvlaki.html" class="recipe-card">
+            <img src="./images/souvlaki.jpg" alt="Souvlaki" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Chicken Souvlaki</h2>
+                <p class="recipe-origin">Origin: Greece</p>
+                <p class="recipe-description">Grilled chicken skewers with tzatziki sauce.</p>
+            </div>
+        </a>
+
+        <!-- Vietnamese Recipes -->
+        <a href="./recipes/pho.html" class="recipe-card">
+            <img src="./images/pho.jpg" alt="Pho" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Phở Bò</h2>
+                <p class="recipe-origin">Origin: Vietnam</p>
+                <p class="recipe-description">Vietnamese beef noodle soup with herbs and spices.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/springrolls.html" class="recipe-card">
+            <img src="./images/springrolls.jpg" alt="Spring Rolls" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Fresh Spring Rolls</h2>
+                <p class="recipe-origin">Origin: Vietnam</p>
+                <p class="recipe-description">Rice paper rolls with shrimp, herbs, and vegetables.</p>
+            </div>
+        </a>
+
+        <!-- Korean Recipes -->
+        <a href="./recipes/kimchi.html" class="recipe-card">
+            <img src="./images/kimchi.jpg" alt="Kimchi" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Traditional Kimchi</h2>
+                <p class="recipe-origin">Origin: Korea</p>
+                <p class="recipe-description">Fermented napa cabbage with Korean red pepper.</p>
+            </div>
+        </a>
+
+        <a href="./recipes/bibimbap.html" class="recipe-card">
+            <img src="./images/bibimbap.jpg" alt="Bibimbap" class="recipe-image">
+            <div class="recipe-content">
+                <h2 class="recipe-title">Bibimbap</h2>
+                <p class="recipe-origin">Origin: Korea</p>
+                <p class="recipe-description">Rice bowl with vegetables, meat, and gochujang sauce.</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
